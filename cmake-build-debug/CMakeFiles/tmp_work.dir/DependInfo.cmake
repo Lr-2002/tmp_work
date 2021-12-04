@@ -1,15 +1,14 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "F:/tmp_work/dp_seqlist.c" "F:/tmp_work/cmake-build-debug/CMakeFiles/tmp_work.dir/dp_seqlist.c.obj"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/lr-2002/code/tmp_work/dp_seqlist.c" "CMakeFiles/tmp_work.dir/dp_seqlist.c.o" "gcc" "CMakeFiles/tmp_work.dir/dp_seqlist.c.o.d"
   )
 
 # Targets to which this target links.

@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/tmp_work.dir/dp_seqlist.c.obj"
-  "libtmp_work.dll.a"
-  "tmp_work.exe"
-  "tmp_work.exe.manifest"
+  "CMakeFiles/tmp_work.dir/dp_seqlist.c.o"
+  "CMakeFiles/tmp_work.dir/dp_seqlist.c.o.d"
+  "tmp_work"
   "tmp_work.pdb"
 )
 

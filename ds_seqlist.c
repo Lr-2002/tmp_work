@@ -1,5 +1,6 @@
 //
 // Created by ASUS on 2021/11/15.
+// select
 //
 
 #include<stdio.h>
@@ -16,6 +17,7 @@ sequenlist* create();
 void print(sequenlist*);
 void insert(sequenlist*,int, int );
 void delete(sequenlist*,int);
+void select_insert(sequenlist*);
 void append_insert(sequenlist*, int);
 void Delete(sequenlist*, sequenlist*, sequenlist*);
 int main(void)
@@ -24,7 +26,6 @@ int main(void)
     printf("*************please input LA numbers end with -1: ***********************\n");
     LA = create();
     printf("********************** insert a num 12 to LA *******************************\n");
-//    append_insert(LA, 4);
     print(LA);
 
     return 0;
@@ -44,47 +45,34 @@ sequenlist* create()
     {
 //        L->last++; //从1单元开始存放元素
 //        L->data[L->last] = ch;
-        append_insert(L, ch);
+        insert(L, ch,L->last);
         scanf("%d", &ch);
     }
+    select_insert(L);
     return L;
 }
 
-void append_insert(sequenlist* L, int num)
+
+void select_insert(sequenlist* L)
 {
-    if(L->last == 0)
-    {
-        insert(L,num,0);
-        // L->data[1] = num;
-    }
-    else {
-        if(num >= L->data[L->last])
-        {
-            insert(L,num,L->last);
-            return;
-        } else if (num <= L->data[1])
-        {
-            insert(L,num,0);
-            return;
-        } else{
-
-            for (int i = 1; i <= L->last ; ++i) {
-                if ((num>=L->data[i-1]&& num<=L->data[i]))
-                {
-                    insert(L,num,i-1);
-                    break;
-                }
+    for (int i = 1; i <= L->last ; ++i) {
+        int temp = 1000000;
+        int loc = 10000;
+        for (int j = i; j<= L->last ;++j) {
+            if (L -> data[j] <= temp)
+            {
+                temp = L -> data[j];
+                loc = j;
             }
-
         }
-
+        delete(L,loc);
+        insert(L,temp,i-1);
     }
-    print(L);
 }
-
 void insert(sequenlist* L, int num,int place)
 {
 
+//    printf("\n appending : %d",num);
     for (int i = L->last+1; i >place; i--) {
         L->data[i] = L->data[i-1];
     }
@@ -100,8 +88,6 @@ void delete(sequenlist *L , int temp)
     }
     L->last--;
 }
-
-
 
 //输出顺序表
 void print(sequenlist*L)

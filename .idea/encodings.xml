@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/dp_seqlist.c" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/ds_seqlist.c" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/list.c" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/seqlist.c" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/stack.c" charset="GB2312" />
